@@ -1,3 +1,8 @@
+'''
+    This is an example of a class that follows the Interface Segregation Principle.
+    UserInterface implements all the methods that are common to all users.
+'''
+
 class UserInterface:
     def create_user(self, name: str, email: str, password: str):
         pass
@@ -42,19 +47,20 @@ class Customer(UserInterface):
 
 
 # Test code
-employee = Employee()
-employee.create_user("John", "john@example.com", "123456")
-employee.get_user_details()
+if __name__ == "__main__":
+    employee = Employee()
+    employee.create_user("John", "john@example.com", "123456")
+    employee.get_user_details()
 
 
-customerA = Customer()
-customerA.create_user("Jane", "jane@example.com", "123456")
-customerA.get_user_details()
+    customerA = Customer()
+    customerA.create_user("Jane", "jane@example.com", "123456")
+    customerA.get_user_details()
 
-customerB = Customer()
+    customerB = Customer()
 
-customerB.create_user("Jack", "jack@example.com", "123456")
+    customerB.create_user("Jack", "jack@example.com", "123456")
 
 
-employee.delete_user(customerA)
+    employee.delete_user(customerA)
 
