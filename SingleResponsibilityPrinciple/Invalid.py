@@ -20,3 +20,4 @@ myTracker = MoneyTracker(10000)
 myTracker.deposit_money(1000)
 myTracker.deposit_money(-1000)
 myTracker.deposit_money(100000)
+
